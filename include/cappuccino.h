@@ -1,7 +1,11 @@
 #ifndef CAPPUCCINO
 #define CAPPUCCINO
 
-/*class Cappuccino
+#include <string>
+#include <vector>
+#include "sub_ingredients.h"
+
+class Cappuccino : public EspressoBased
 {
 public:
     Cappuccino();
@@ -19,6 +23,5 @@ private:
     std::vector<Ingredient*> side_items;
 
 };
-*/
 
 #endif // CAPPUCCINO
