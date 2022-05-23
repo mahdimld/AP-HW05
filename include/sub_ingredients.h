@@ -1,6 +1,8 @@
 #ifndef SUB_INGREDIENTS_H
 #define SUB_INGREDIENTS_H
 
+#include "ingredient.h"
+
 class Cinnamon : public Ingredient
 {
 public:
@@ -56,7 +58,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Cinnamon : public Ingredient
+class Milk : public Ingredient
 {
 public:
     Milk(size_t units) : Ingredient{10, units}
@@ -67,7 +69,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Cinnamon : public Ingredient
+class MilkFoam : public Ingredient
 {
 public:
     MilkFoam(size_t units) : Ingredient{5, units}
@@ -78,7 +80,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Cinnamon : public Ingredient
+class Water : public Ingredient
 {
 public:
     Water(size_t units) : Ingredient{1, units}

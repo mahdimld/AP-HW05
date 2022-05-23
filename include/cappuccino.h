@@ -1,7 +1,7 @@
 #ifndef CAPPUCCINO
 #define CAPPUCCINO
 
-class Cappuccino
+/*class Cappuccino
 {
 public:
     Cappuccino();
@@ -19,6 +19,6 @@ private:
     std::vector<Ingredient*> side_items;
 
 };
-
+*/
 
 #endif // CAPPUCCINO

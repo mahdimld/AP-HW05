@@ -4,15 +4,18 @@
 class Ingredient
 {
 public:
-    double get_price_unit(){return price_unit};
-    size_t get_units(){return units};
-    std::string get_name(){return name};
+    double get_price_unit(){return price_unit;}
+    size_t get_units(){return units;}
+    std::string get_name(){return name;}
 
-    double price();
+    double price(){return price_unit*units;}
     
 
 protected:
-    Ingredient(double price_unit, size_t units);
+    Ingredient(double price_unit, size_t units){
+        price_unit = this->price_unit;
+        units = this->units;
+    }
 
     double price_unit;
     size_t units;
