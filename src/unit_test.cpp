@@ -43,7 +43,7 @@ TEST(HW5Test, TEST3) {
     EXPECT_EQ(ingredient->get_name(), "Water");
 }
 
-/*TEST(HW5Test, TEST4) {
+TEST(HW5Test, TEST4) {
     Cappuccino cappuccino{};
     EXPECT_EQ(cappuccino.get_name(), "Cappuccino");
     auto ingredients = cappuccino.get_ingredients();
@@ -111,7 +111,7 @@ TEST(HW5Test, TEST10) {
     delete esp;
     EXPECT_EQ(sides.size(), 0);
 }
-
+/*
 TEST(HW5Test, TEST11) {
     Cappuccino cappuccino{};
     cappuccino.brew();

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "sub_ingredients.h"
+#include "espresso_based.h"
 
 class Cappuccino : public EspressoBased
 {
