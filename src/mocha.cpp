@@ -4,7 +4,6 @@ Mocha::Mocha() : EspressoBased()
 {
     side_items.clear();
     name = "Mocha";
-    ingredients.clear();
     ingredients.push_back(new Espresso{2});
     ingredients.push_back(new Milk{2});
     ingredients.push_back(new MilkFoam{1});
