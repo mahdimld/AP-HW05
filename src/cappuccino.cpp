@@ -5,9 +5,9 @@ Cappuccino::Cappuccino() : EspressoBased()
 {
     side_items.clear();
     name = "Cappuccino";
-    ingredients.push_back(new Espresso(2));
-    ingredients.push_back(new Milk(2));
-    ingredients.push_back(new MilkFoam(1));
+    ingredients.push_back(new Espresso{2});
+    ingredients.push_back(new Milk{2});
+    ingredients.push_back(new MilkFoam{1});
 }
 Cappuccino::Cappuccino(const Cappuccino& cap){
     side_items = cap.side_items;
@@ -26,6 +26,9 @@ double Cappuccino::price(){
     double sum{0};
 
     for(auto i : ingredients){
+        sum += i->price();
+    }
+    for(auto i : side_items){
         sum += i->price();
     }
     return sum;

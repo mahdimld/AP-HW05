@@ -3,6 +3,7 @@
 
 #include "ingredient.h"
 
+/*
 class Cinnamon : public Ingredient
 {
 public:
@@ -90,7 +91,28 @@ public:
 
     virtual std::string get_name() {return this->name;}
 };
+*/
 
+#define DEFCLASS(NAME, PRICE)                            \
+    class NAME : public Ingredient                     \
+    {                                                   \
+    public:                                             \
+        NAME(size_t units)                             \
+            : Ingredient{PRICE, units}                    \
+        {                                               \
+            name = #NAME;                              \
+        }                                               \
+        virtual std::string get_name() { return name; } \
+    };
+
+DEFCLASS(Cinnamon, 5);
+DEFCLASS(Chocolate, 5);
+DEFCLASS(Sugar, 1);
+DEFCLASS(Cookie, 10);
+DEFCLASS(Espresso, 15);
+DEFCLASS(Milk, 10);
+DEFCLASS(MilkFoam, 5);
+DEFCLASS(Water, 1);
 
 
 

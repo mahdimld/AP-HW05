@@ -4,10 +4,11 @@ Mocha::Mocha() : EspressoBased()
 {
     side_items.clear();
     name = "Mocha";
-    ingredients.push_back(new Espresso(2));
-    ingredients.push_back(new Milk(2));
-    ingredients.push_back(new MilkFoam(1));
-    ingredients.push_back(new Chocolate(1));
+    ingredients.clear();
+    ingredients.push_back(new Espresso{2});
+    ingredients.push_back(new Milk{2});
+    ingredients.push_back(new MilkFoam{1});
+    ingredients.push_back(new Chocolate{1});
 }
 Mocha::Mocha(const Mocha& moc){
     side_items = moc.side_items;
@@ -26,6 +27,9 @@ double Mocha::price(){
     double sum{0};
 
     for(auto i : ingredients){
+        sum += i->price();
+    }
+    for(auto i : side_items){
         sum += i->price();
     }
     return sum;
